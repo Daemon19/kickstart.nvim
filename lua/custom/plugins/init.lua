@@ -11,6 +11,9 @@ vim.keymap.set('n', '<leader>tf', '<cmd>ToggleTerm direction=float<cr>', { desc 
 vim.keymap.set('n', '<leader>th', '<cmd>ToggleTerm direction=horizontal<cr>', { desc = 'Horizontal terminal' })
 vim.keymap.set('n', '<leader>tv', '<cmd>ToggleTerm direction=vertical<cr>', { desc = 'Vertical terminal' })
 
+vim.keymap.set('i', '<C-j>', '<Esc>', { desc = 'Change to normal mode' })
+vim.keymap.set('v', '<C-j>', '<Esc>', { desc = 'Change to normal mode' })
+
 return {
   'akinsho/toggleterm.nvim',
   version = '*',
