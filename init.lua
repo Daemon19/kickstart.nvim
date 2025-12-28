@@ -124,6 +124,9 @@ vim.o.breakindent = true
 -- Save undo history
 vim.o.undofile = true
 
+-- Specify undo history file directory
+vim.o.undodir = vim.fn.stdpath 'data' .. '/undodir'
+
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 vim.o.ignorecase = true
 vim.o.smartcase = true
@@ -1017,3 +1020,5 @@ require('lazy').setup({
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
+
+vim.keymap.set('x', '<leader>p', '"_dP', { desc = '[P]aste with void register' })
